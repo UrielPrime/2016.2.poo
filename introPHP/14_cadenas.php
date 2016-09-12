@@ -1,6 +1,5 @@
 <?php
-require_once '4_funciones.php';
-
+define ('BR', '<br>');
 $cadena = "Esto es una 'prueba'";
 
 // Encierra con barras diagonales inversas una cadena
@@ -52,10 +51,10 @@ echo 'str_replace() => ', str_replace($busca, $reemplazo, $cadena), BR;
 
 // Una cadena en array
 $iterador = str_split($cadena);
-print_r($iterador); 
+print_r($iterador);
 echo BR;
 $iterador = str_split($cadena, 3);
-print_r($iterador); 
+print_r($iterador);
 echo BR;
 
 // Conteo de palabras
