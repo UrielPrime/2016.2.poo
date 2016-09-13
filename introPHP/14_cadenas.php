@@ -1,5 +1,5 @@
 <?php
-define ('BR', '<br>');
+define ('BR', PHP_EOL);
 $cadena = "Esto es una 'prueba'";
 
 // Encierra con barras diagonales inversas una cadena
@@ -12,12 +12,12 @@ echo 'chr(65) => ', chr(65), BR;
 echo "ord('A') => ", ord('A'), BR;
 
 // Separar una cadena en un arreglo
-$iterador = explode(' ', $cadena);
-echo 'Primera palabra: ', $iterador[0], BR;
+$arreglo = explode(' ', $cadena);
+echo 'Primera palabra: ', $arreglo[0], BR;
 
 // Unir un arreglo en una cadena
-$iterador = array('varias', 'palabras', 'en', 'una', 'frase');
-echo 'Implode() => ', implode("-", $iterador), BR;
+$arreglo = array('varias', 'palabras', 'en', 'una', 'frase');
+echo 'Implode() => ', implode("-", $arreglo), BR;
 
 // Coloca comas en los números
 echo 'number_format() => ', number_format(1202.5, 2), BR;
@@ -50,20 +50,20 @@ $reemplazo = array('que tal', 'Tierra', 'X');
 echo 'str_replace() => ', str_replace($busca, $reemplazo, $cadena), BR;
 
 // Una cadena en array
-$iterador = str_split($cadena);
-print_r($iterador);
+$arreglo = str_split($cadena);
+print_r($arreglo);
 echo BR;
-$iterador = str_split($cadena, 3);
-print_r($iterador);
+$arreglo = str_split($cadena, 3);
+print_r($arreglo);
 echo BR;
 
 // Conteo de palabras
 echo 'str_word_count() => ', str_word_count($cadena), BR;
-$iterador = str_word_count($cadena, 1);
-print_r($iterador);
+$arreglo = str_word_count($cadena, 1);
+print_r($arreglo);
 echo BR;
-$iterador = str_word_count($cadena, 2);
-print_r($iterador);
+$arreglo = str_word_count($cadena, 2);
+print_r($arreglo);
 echo BR;
 
 // Reemplazo de tags HTML y PHP
@@ -91,7 +91,9 @@ echo 'substr() => ', substr($cadena, -2, 2), BR;
 // Formatos de capitalizacion
 $cadena = 'francisco morazán';
 echo 'strtolower => ', strtolower($cadena), BR;
-echo 'strtoupper => ', mb_strtoupper($cadena), BR;
+echo 'mb_strtolower => ', mb_strtolower($cadena), BR;
+echo 'strtoupper => ', strtoupper($cadena), BR;
+echo 'mb_strtoupper => ', mb_strtoupper($cadena), BR;
 echo 'ucfirst =>', ucfirst($cadena), BR;
 echo 'ucwords => ', ucwords($cadena), BR;
 
