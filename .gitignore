@@ -1,0 +1,7 @@
+#Carpetas
+.phpintel/
+metadata/
+
+
+#Archivos
+*.glue
