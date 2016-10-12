@@ -2,7 +2,7 @@
 
 class SaldoException extends Exception
 {
-    public function errorMessage()
+    public function mostrarError()
     {
         $mensaje = 'Error en linea ' . $this->getLine()
             . ' en archivo: ' . $this->getFile();
@@ -16,6 +16,7 @@ class SaldoException extends Exception
 class Cuenta
 {
     private $saldo;
+    const LIMITE = 10000;
 
     public function __construct($monto)
     {
@@ -31,6 +32,10 @@ class Cuenta
     {
         if ($this->saldo < $monto) {
             throw new SaldoException('Cantidad insuficiente');
+        }
+
+        if ($monto >= self::LIMITE) {
+            throw new Exception('Se ha pasado del límite');
         }
 
         $this->saldo -= $monto;
