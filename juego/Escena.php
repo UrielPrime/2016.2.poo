@@ -39,8 +39,10 @@ class Escena
             } else {
                 if ($valor instanceof Protagonista) {
                     echo '[Heroe] ';
-                } else {
+                } else if ($valor instanceof Villano) {
                     echo '[Villano] ';
+                } else {
+                    echo '[X] ';
                 }
             }
         }
