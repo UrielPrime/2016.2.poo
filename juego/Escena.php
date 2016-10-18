@@ -5,7 +5,7 @@ class Escena
     // Tipo Protagonista
     private $heroe;
     // Tipo Villano
-    private $criminal;
+    private $monstruo;
     // int
     private $inicio;
     // int
